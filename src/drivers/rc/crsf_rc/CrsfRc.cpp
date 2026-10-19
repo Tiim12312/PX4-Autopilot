@@ -361,7 +361,7 @@ void CrsfRc::Run()
 			case 3:
 				vehicle_status_s vehicle_status;
 
-				if (_vehicle_status_sub.update(&vehicle_status)) {
+				if (_vehicle_status_sub.copy(&vehicle_status)) {
 					const char *flight_mode = "(unknown)";
 
 					switch (vehicle_status.nav_state) {
